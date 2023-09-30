@@ -102,7 +102,7 @@ function Navbar() {
             <Link className="link menuLink" to="/gigs?cat=AI">
               AI Services
             </Link>
-            <Link className="link menuLink" to="gigs?cat=Digital">
+            <Link className="link menuLink" to="gigs?cat=Digital Marketing">
               Digital Marketing
             </Link>
             <Link className="link menuLink" to="/gigs?cat=music">

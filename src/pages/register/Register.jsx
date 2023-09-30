@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 
 function Register() {
   const [file, setFile] = useState(null);
+  const [error , setError] = useState('');
   const [user, setUser] = useState({
     username: "",
     email: "",
@@ -40,7 +41,9 @@ function Register() {
       });
       navigate("/")
     } catch (err) {
-      console.log(err);
+     setError(err.response.data.message)
+      console.log(err.response.data.message)
+      
     }
   };
   return (
@@ -74,6 +77,7 @@ function Register() {
             onChange={handleChange}
           />
           <button type="submit">Register</button>
+         <div className="error">{error && error}</div> 
         </div>
         <div className="right">
           <h1>I want to become a seller</h1>
